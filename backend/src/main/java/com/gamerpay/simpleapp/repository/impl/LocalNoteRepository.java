@@ -2,12 +2,14 @@ package com.gamerpay.simpleapp.repository.impl;
 
 import com.gamerpay.simpleapp.model.Note;
 import com.gamerpay.simpleapp.repository.NoteRepository;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Component
+@ConditionalOnExpression("${local:false}")
 public class LocalNoteRepository implements NoteRepository {
 
 	private final List<Note> notes;
@@ -32,7 +34,9 @@ public class LocalNoteRepository implements NoteRepository {
 	}
 
 	@Override
-	public void add(Note note) {
+	public Note save(Note note) {
 		notes.add(note);
+
+		return note;
 	}
 }
