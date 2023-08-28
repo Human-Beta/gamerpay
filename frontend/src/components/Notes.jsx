@@ -1,21 +1,30 @@
+import { useEffect, useState } from 'react';
+import axios from "axios";
 import Note from './Note';
-import { useState } from 'react';
+
+const notesUrl = 'http://localhost:8080/notes';
 
 const Notes = () => {
-  const [notes, setNotes] = useState([
-    { id: 1, value: "Hello" },
-    { id: 2, value: "world!" },
-    { id: 3, value: "How are you?" },
-  ]);
+  const [notes, setNotes] = useState([]);
   const [value, setValue] = useState("");
+
+  useEffect(() => {
+    axios.get(notesUrl).then(res => setNotes(res.data));
+  }, []);
 
   const onChange = (event) => {
     setValue(event.target.value);
   };
 
   const addNote = () => {
-    setNotes([...notes, {value: value}]);
-    setValue('');
+    axios.post(notesUrl, { value })
+      .then((response) => {
+        setNotes([...notes, response.data]);
+        setValue('');
+      })
+      .catch((error) => {
+        alert(error);
+      })
   };
 
   const handleKeyDown = (event) => {
