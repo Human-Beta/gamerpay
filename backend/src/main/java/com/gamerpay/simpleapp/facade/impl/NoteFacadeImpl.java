@@ -28,9 +28,9 @@ public class NoteFacadeImpl implements NoteFacade {
 	}
 
 	@Override
-	public void addNote(final NoteData note) {
+	public NoteData addNote(final NoteData note) {
 		final Note noteModel = mapperService.map(note, Note.class);
 
-		noteService.addNote(noteModel);
+		return mapperService.map(noteService.addNote(noteModel), NoteData.class);
 	}
 }

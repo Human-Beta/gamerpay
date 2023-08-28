@@ -7,5 +7,5 @@ import java.util.List;
 public interface NoteFacade {
 	List<NoteData> getNotes();
 
-	void addNote(NoteData note);
+	NoteData addNote(NoteData note);
 }

@@ -5,6 +5,7 @@ import com.gamerpay.simpleapp.dto.NoteDTO;
 import com.gamerpay.simpleapp.facade.NoteFacade;
 import com.gamerpay.simpleapp.service.impl.MapperService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,6 +19,7 @@ import static org.springframework.http.HttpStatus.CREATED;
 
 @RestController
 @RequestMapping("/notes")
+@CrossOrigin(origins = "*")
 public class NoteController {
 	private final NoteFacade noteFacade;
 	private final MapperService mapperService;
@@ -35,10 +37,14 @@ public class NoteController {
 
 	@PostMapping
 	@ResponseStatus(CREATED)
-	public void addNote(@RequestBody final NoteDTO note) {
+	public NoteDTO addNote(@RequestBody final NoteDTO note) {
 		final NoteData noteData = mapperService.map(note, NoteData.class);
 
-		noteFacade.addNote(noteData);
+		return mapNote(noteFacade.addNote(noteData));
+	}
+
+	private NoteDTO mapNote(final NoteData source) {
+		return mapperService.map(source, NoteDTO.class);
 	}
 
 	private List<NoteDTO> mapNotes(final List<NoteData> sources) {

@@ -7,5 +7,5 @@ import java.util.List;
 public interface NoteService {
 	List<Note> getNotes();
 
-	void addNote(Note note);
+	Note addNote(Note note);
 }
