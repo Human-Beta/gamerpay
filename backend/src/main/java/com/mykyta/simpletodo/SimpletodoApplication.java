@@ -1,13 +1,13 @@
-package com.gamerpay.simpleapp;
+package com.mykyta.simpletodo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SimpleappApplication {
+public class SimpletodoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SimpleappApplication.class, args);
+		SpringApplication.run(SimpletodoApplication.class, args);
 	}
 
 }

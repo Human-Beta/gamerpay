@@ -1,6 +1,6 @@
-package com.gamerpay.simpleapp.facade;
+package com.mykyta.simpletodo.facade;
 
-import com.gamerpay.simpleapp.data.NoteData;
+import com.mykyta.simpletodo.data.NoteData;
 
 import java.util.List;
 

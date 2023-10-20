@@ -1,10 +1,10 @@
-package com.gamerpay.simpleapp.facade.impl;
+package com.mykyta.simpletodo.facade.impl;
 
-import com.gamerpay.simpleapp.data.NoteData;
-import com.gamerpay.simpleapp.facade.NoteFacade;
-import com.gamerpay.simpleapp.model.Note;
-import com.gamerpay.simpleapp.service.NoteService;
-import com.gamerpay.simpleapp.service.impl.MapperService;
+import com.mykyta.simpletodo.data.NoteData;
+import com.mykyta.simpletodo.facade.NoteFacade;
+import com.mykyta.simpletodo.model.Note;
+import com.mykyta.simpletodo.service.NoteService;
+import com.mykyta.simpletodo.service.impl.MapperService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

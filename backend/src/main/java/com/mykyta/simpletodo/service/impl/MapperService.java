@@ -1,4 +1,4 @@
-package com.gamerpay.simpleapp.service.impl;
+package com.mykyta.simpletodo.service.impl;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

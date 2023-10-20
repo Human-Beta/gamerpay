@@ -1,6 +1,6 @@
-package com.gamerpay.simpleapp.repository;
+package com.mykyta.simpletodo.repository;
 
-import com.gamerpay.simpleapp.model.Note;
+import com.mykyta.simpletodo.model.Note;
 
 import java.util.List;
 

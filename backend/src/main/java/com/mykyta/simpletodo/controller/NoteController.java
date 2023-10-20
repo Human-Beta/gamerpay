@@ -1,9 +1,9 @@
-package com.gamerpay.simpleapp.controller;
+package com.mykyta.simpletodo.controller;
 
-import com.gamerpay.simpleapp.data.NoteData;
-import com.gamerpay.simpleapp.dto.NoteDTO;
-import com.gamerpay.simpleapp.facade.NoteFacade;
-import com.gamerpay.simpleapp.service.impl.MapperService;
+import com.mykyta.simpletodo.data.NoteData;
+import com.mykyta.simpletodo.dto.NoteDTO;
+import com.mykyta.simpletodo.facade.NoteFacade;
+import com.mykyta.simpletodo.service.impl.MapperService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,6 +39,9 @@ public class NoteController {
 	@ResponseStatus(CREATED)
 	public NoteDTO addNote(@RequestBody final NoteDTO note) {
 		final NoteData noteData = mapperService.map(note, NoteData.class);
+
+		var obj = new Object() {};
+		System.out.println(obj);
 
 		return mapNote(noteFacade.addNote(noteData));
 	}

@@ -1,8 +1,8 @@
-package com.gamerpay.simpleapp.service.impl;
+package com.mykyta.simpletodo.service.impl;
 
-import com.gamerpay.simpleapp.model.Note;
-import com.gamerpay.simpleapp.repository.NoteRepository;
-import com.gamerpay.simpleapp.service.NoteService;
+import com.mykyta.simpletodo.model.Note;
+import com.mykyta.simpletodo.repository.NoteRepository;
+import com.mykyta.simpletodo.service.NoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

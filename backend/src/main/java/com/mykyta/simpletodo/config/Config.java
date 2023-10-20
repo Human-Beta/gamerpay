@@ -1,4 +1,4 @@
-package com.gamerpay.simpleapp.config;
+package com.mykyta.simpletodo.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

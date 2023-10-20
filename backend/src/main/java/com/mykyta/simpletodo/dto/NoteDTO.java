@@ -1,6 +1,6 @@
-package com.gamerpay.simpleapp.data;
+package com.mykyta.simpletodo.dto;
 
-public class NoteData {
+public class NoteDTO {
 	private long id;
 	private String value;
 

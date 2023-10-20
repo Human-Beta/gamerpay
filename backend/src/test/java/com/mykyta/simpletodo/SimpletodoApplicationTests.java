@@ -1,10 +1,10 @@
-package com.gamerpay.simpleapp;
+package com.mykyta.simpletodo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SimpleappApplicationTests {
+class SimpletodoApplicationTests {
 
 	@Test
 	void contextLoads() {

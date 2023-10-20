@@ -1,4 +1,4 @@
-package com.gamerpay.simpleapp.model;
+package com.mykyta.simpletodo.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
